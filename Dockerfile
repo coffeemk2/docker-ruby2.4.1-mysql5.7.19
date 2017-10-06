@@ -151,3 +151,8 @@ EXPOSE 3306
 # CMD ["mysqld"]
 
 RUN apt-get install mysql-server
+
+RUN /etc/init.d/mysql start
+RUN gem install bundler
+RUN apt-get update && apt-get install node -y
+RUN gem install rails -v 5.0.2
